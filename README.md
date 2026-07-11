@@ -84,9 +84,9 @@ from cliargparse.actions import store_true_action
 root = Command("root")
 
 group = root.mutex_option_group(required=True)
-group.option("--alpha", "-a", action=store_true_action)
-group.option("--beta", "-b", action=store_true_action)
-group.option("--ceta", "-c", action=store_true_action)
+group.option("alpha", "a", action=store_true_action)
+group.option("beta", "b", action=store_true_action)
+group.option("ceta", "c", action=store_true_action)
 
 source = "root --alpha --beta"
 print(root.parse_input(source))
